@@ -131,14 +131,14 @@ footer p {
 
 /*Responsivenes*/
 
-@media screen and (max-width:1340px) {
+@media screen and (max-width:1440px) {
 	.content{
 		width: 100%;
 		padding: 0 8px;
 	}
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1200px) {
 	.content{
 		overflow-x: auto;
 	}
