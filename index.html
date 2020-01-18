@@ -11,7 +11,50 @@
     <title>Vabanenud õppekohad Tartu Ülikoolis</title>
 </head>
 <body>
+    <header>
+        <img class="logo"src="img/horisontaal.svg" alt="Tartu Ülikooli logo">
+    </header>
+    <section>
+        <div class="info">
+            <h1>Vabanenud õppekohad Tartu Ülikoolis</h1>
+            <p>Vastavalt Tartu Ülikooli <a href="http://www.ut.ee/oke" target="_blank">õppekorralduseeskirjale</a> täidetakse vabad õppekohad avaliku konkursi korras semestri algusest arvates nelja nädala jooksul. Esimese õppeaasta sügissemestril vabu õppekohti ei täideta.</p>
+            <p>Lisainfo <a href="https://www.ut.ee/et/oppimine/uliopilasele/oppekohad/vabad_kohad" target="_blank">vabale õppekohale kandideerimise kohta</a>.</p>
+        </div>
+        <div class="levels">
+            <button type="button" class="collapsible">Bakalaureuse-, rakenduskõrghariduse- ja integreeritud õppes</button>
+            <div class="content">
+            <p>Siin on tabel 1</p>
+            </div>
+            <button type="button" class="collapsible">Magistriõppes</button>
+            <div class="content">
+            <p>Siin on tabel 2</p>
+            </div>
+            <button type="button" class="collapsible">Doktoriõppes</button>
+            <div class="content">
+            <p>Siin on tabel 3</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Õppeosakond ois.tugi@ut.ee</p>
+        <div class="shape"></div>
+    </footer>
     
-    
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+        }
+    </script>
 </body>
 </html>
