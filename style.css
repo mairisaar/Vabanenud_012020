@@ -16,7 +16,7 @@ header {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	background-color: darksalmon;
+	background-color: lightsteelblue;
 }
 .logo{
 	margin: 40px 80px;
@@ -29,78 +29,93 @@ h1 {
 	font-weight: 700;
 	font-size: 36px;
 	margin-bottom: 48px;
+	line-height: 3rem;
 }
 p {
 	font-size: 18px;
-	margin-top: 40px;
+	margin-top: 60px;
 }
 .info {
 	width: 80vw;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 80px;
-	margin-bottom: 40px;
-	background-color: darkkhaki;
+	margin-top: 120px;
+	margin-bottom: 120px;
 }
 .levels{
-	background-color: lightpink;
-	/*width: 100vw;
-	margin-left: auto;
-	margin-right: auto;*/
-	margin-bottom: 80px;
-	/*display: flex;
+	margin-bottom: 240px;
+	display: flex;
 	flex-direction: column;
-	justify-content: space-around;*/
+	align-items: center;
 }
 .collapsible {
-	background-color: #eee;
-	color: #444;
+	background-color: #ffffff;
 	cursor: pointer;
 	padding: 18px;
-	width: 100vw;
+	width: 80vw;
 	border: none;
 	text-align: center;
 	outline: none;
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: 500;
 	color: #2C5696;
 
  }
   
 .active, .collapsible:hover {
-	background-color: #ccc;
+	background-color: #f1f1f1;
  }
   
 .content {
 	padding: 0 18px;
-	width: 80vw;
+	width: 80%;
 	margin-right: auto;
 	margin-left: auto;
-	max-height: 0;
+	max-height: 0; 
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
  }
-  
+/*Table stle*/
+table {
+	font-size: 18px;
+	margin-bottom: 80px;
+	border-collapse: collapse;
+}
+th, td{
+	width: auto;
+	height: 40px;
+	padding: 8px 16px;
+}
+th{
+	background-color: #2C5696;
+	color: #ffffff;
+	font-weight: normal;
+}
+tr{
+	word-wrap: initial;
+}
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+  }
+tr:hover{
+	font-weight: 500;
+}
 
 footer {
-    position: fixed;
-    bottom: 0;
-    right: 10vw;
-    height: 160px;
+	/*position: relative;*/
+	bottom: 0;
+	height: 160px;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-	/*margin-top: 400px;*/
-	background-color: gold;
 }
 
 footer p {
     position: absolute;
     color: #ffffff;
-    text-align: center;
-    font-weight: 500;
-	padding-right: 16px;
-	line-height: 3rem;
+	text-align: center;
+	align-self: center;
+	font-weight: 500;
+	width: 400px;
 }
 
 .shape {
@@ -111,5 +126,42 @@ footer p {
     background-color: #2C5696;
     z-index: -1;
 	transform: rotate(-15deg);
-	margin-top: 80px;
+	margin-right: 40px;
 }
+
+/*Responsivenes*/
+
+@media screen and (max-width:1340px) {
+	.content{
+		width: 100%;
+		padding: 0 8px;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.content{
+		overflow-x: auto;
+	}
+    .shape {
+        display: none;
+	}
+	footer{
+		width: 100vw;
+		position: relative;
+		justify-content: center;
+		background-color: #2C5696;
+		right: initial;
+	}
+	footer p {
+		position: relative;
+	}
+	
+}
+@media screen and (max-width: 800px) {
+	footer{
+		background-color: lightpink;
+	}
+	
+}
+
+	
