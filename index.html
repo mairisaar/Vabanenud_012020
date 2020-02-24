@@ -26,15 +26,16 @@
             <h1>Vabanenud õppekohad Tartu Ülikoolis</h1>
             <p>Vastavalt Tartu Ülikooli <a href="http://www.ut.ee/oke" target="_blank">õppekorralduseeskirjale</a> täidetakse vabad õppekohad avaliku konkursi korras semestri algusest arvates nelja nädala jooksul. Esimese õppeaasta sügissemestril vabu õppekohti ei täideta.</p>
             <p>Lisainfo <a href="https://www.ut.ee/et/oppimine/uliopilasele/oppekohad/vabad_kohad" target="_blank">vabale õppekohale kandideerimise kohta</a>.</p>
+            <!--<p id="showDate1"></p>-->
         </div>
         <!---õppeastmete collapsible pealkirjad-->
         <div class="levels">
             <button type="button" class="collapsible">Bakalaureuse-, rakenduskõrghariduse- ja integreeritud õppes</button>
             <div class="content">
                 <!--<input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />-->
-                <p id="showDate"></p>
-                <p id="showData"></p>
-            <p>Siin on tabel 1</p>
+                <p id="showDate2"></p>
+                <p id="showDataB"></p>
+            <!--<p>Siin on tabel 1</p>
             <table>
                 <tr>
                     <th colspan="4"></th>
@@ -135,11 +136,13 @@
                     <td class="col15"></td>
                     <td class="col16"></td>
                 </tr>
-            </table>
+            </table>-->
             </div>
             <button type="button" class="collapsible">Magistriõppes</button>
             <div class="content">
-            <p>Siin on tabel 2</p>
+                <p id="showDate3"></p>
+                <p id="showDataM"></p>
+            <!--<p>Siin on tabel 2</p>
             <table>
                 <tr>
                     <th colspan="4"></th>
@@ -197,11 +200,13 @@
                     <td class="col07">1</td>
                     <td class="col08"></td>
                 </tr>
-            </table>
+            </table>-->
             </div>
             <button type="button" class="collapsible">Doktoriõppes</button>
             <div class="content">
-            <p>Siin on tabel 3</p>
+                <p id="showDate4"></p>
+                <p id="showDataD"></p>
+            <!--<p>Siin on tabel 3</p>
             <table>
                 <tr>
                     <th colspan="4"></th>
@@ -280,7 +285,7 @@
                     <td class="col11">3</td>
                     <td class="col12"></td>
                 </tr>
-            </table>
+            </table>-->
             </div>
         </div>
     </section>
@@ -291,13 +296,20 @@
     
     <script>
         // Andmed seisuga kuupäeva kuvamine
+        function ShowUpdateDate(id){
         var myDate = {kuupäev: "26.01.2020", kell: "01:23"};
-        document.getElementById("showDate").innerHTML = "Andmed seisuga " + myDate.kuupäev + " kell " + myDate.kell + ".";
+        document.getElementById(id).innerHTML = "Andmed seisuga " + myDate.kuupäev + " kell " + myDate.kell + ".";
+        }
+
+        //ShowUpdateDate("showDate1");
+        ShowUpdateDate("showDate2");
+        ShowUpdateDate("showDate3");
+        ShowUpdateDate("showDate4");
 
         //tabeli kuvamine
         //json
         function CreateTableFromJSON() {
-    var myData = [
+            var myData = [
             
             {
                 "Valdkond": "HV",
@@ -372,46 +384,47 @@
                 "6. aasta SÕ": ""
             }
         ]
-        //EXTRACT VALUE FOR HTML HEADER. 
-        var col = [];
-        for (var i = 0; i < myData.length; i++) {
-            for (var key in myData[i]) {
-                if (col.indexOf(key) === -1) {
-                    col.push(key);
+            //tabeli päise jaoks andmete leidmine
+            var col = [];
+            for (var i = 0; i < myData.length; i++) {
+                for (var key in myData[i]) {
+                    if (col.indexOf(key) === -1) {
+                        col.push(key);
+                    }
                 }
             }
-        }
 
-        // CREATE DYNAMIC TABLE.
-        var table = document.createElement("table");
+            // dünaamilise tabeli loomine
+            var table = document.createElement("table");
 
-        // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+            // tabeli päise loomine leitud andmete abil
 
-        var tr = table.insertRow(-1);                   // TABLE ROW.
+            var tr = table.insertRow(-1);                   // tabeli rida
 
-        for (var i = 0; i < col.length; i++) {
-            var th = document.createElement("th");      // TABLE HEADER.
-            th.innerHTML = col[i];
-            tr.appendChild(th);
-        }
-
-        // ADD JSON DATA TO THE TABLE AS ROWS.
-        for (var i = 0; i < myData.length; i++) {
-
-            tr = table.insertRow(-1);
-
-            for (var j = 0; j < col.length; j++) {
-                var tabCell = tr.insertCell(-1);
-                tabCell.innerHTML = myData[i][col[j]];
+            for (var i = 0; i < col.length; i++) {
+                var th = document.createElement("th");      // tabeli päis
+                th.innerHTML = col[i];
+                tr.appendChild(th);
             }
-        }
 
-        // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-        var divContainer = document.getElementById("showData");
-        divContainer.innerHTML = "";
-        divContainer.appendChild(table);
-    }
-    CreateTableFromJSON()
+            // jsoni andmete lisamine tabelisse ridadena
+            for (var i = 0; i < myData.length; i++) {
+
+                tr = table.insertRow(-1);
+
+                for (var j = 0; j < col.length; j++) {
+                    var tabCell = tr.insertCell(-1);
+                    tabCell.innerHTML = myData[i][col[j]];
+                }
+            }
+
+            // loodud jsoni andmetega tabeli lisamine konteinerisse
+            var divContainer = document.getElementById("showDataM");
+            divContainer.innerHTML = "";
+            divContainer.appendChild(table);
+
+        }
+        CreateTableFromJSON();
 
         //collapsible headings
         var coll = document.getElementsByClassName("collapsible");
