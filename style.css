@@ -95,6 +95,21 @@ p {
 .active, .collapsible:hover {
 	background-color: #f1f1f1;
  }
+
+.collapsible:after {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	content: 'keyboard_arrow_down';
+	font-size: 24px;
+	float: right;
+ }
+  
+.active:after {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	content: 'keyboard_arrow_up';
+ }
+  
   
 .content {
 	width: 80%;
