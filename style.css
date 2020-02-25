@@ -6,23 +6,28 @@ body {
 	color: #2C5696;
 	line-height: 145%;
 }
+
 .clearfix:after {
 	content: "";
 	display: table;
 	clear: both;
 }
+
 header {
 	height: 300px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
+
 .beauty {
 	display: flex;
 	flex-direction: row;
 	z-index: -1;
+	margin-right: 40px;
 }
-.main, .light, .img, .shape {
+
+.main, .light, .shape {
 	width: 300px;
 	height: 200px;
 }
@@ -32,24 +37,31 @@ header {
 	transform: rotate(-15deg);
 	z-index: -1;
 }
+
 .light {
 	position: absolute;
 	right: 300px;
 	background-color: #00A6E6;
-	transform: rotate(-30deg);
+	transform: rotate(-45deg);
 }
-.img{
-	position: absolute;
-	right: 500px;
-	transform: rotate(-15deg);
+
+.img {
+	width: 342px;
+	height: 271px;
+	background: url(img/foto.png) center center;
+	background-size: cover;
+	clip-path: polygon(85% 0%, 100% 71%, 15% 100%, 0% 29%);
 	z-index: 1;
-	background-color: burlywood;
+	position: absolute;
+	right: 360px;
 }
+	
 .logo{
 	position: absolute;
 	height: 64px;
 	width: auto;
 	align-self: center;
+	right: 40px;
 }
 a{
 	text-decoration: none;
@@ -60,24 +72,27 @@ h1 {
 	font-size: 36px;
 	margin-bottom: 48px;
 	line-height: 3rem;
+	margin-top: 120px;
 }
 p {
 	font-size: 16px;
 	margin-top: 24px;
 }
+
 .info {
 	width: 80vw;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 120px;
 	margin-bottom: 60px;
 }
+
 .levels{
 	margin-bottom: 60px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+
 .collapsible {
 	background-color: #ffffff;
 	cursor: pointer;
@@ -89,7 +104,6 @@ p {
 	font-size: 24px;
 	font-weight: 500;
 	color: #2C5696;
-
  }
   
 .active, .collapsible:hover {
@@ -119,6 +133,7 @@ p {
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
  }
+
 /*Table style*/
 table {
 	font-size: 16px;
@@ -135,9 +150,11 @@ th{
 	color: #ffffff;
 	font-weight: normal;
 }
+
 tr{
 	word-wrap: initial;
 }
+
 tr:nth-child(odd) {
 	background-color: #f1f1f1;
   }
@@ -150,7 +167,8 @@ footer {
 	bottom: 0;
 	height: 160px;
     display: flex;
-    justify-content: flex-end;
+	justify-content: flex-end;
+	margin-right: 80px;
 }
 
 footer p {
@@ -168,11 +186,13 @@ footer p {
 	transform: rotate(-15deg);
 }
 
-/*Responsivenes*/
+/*Responsivnes*/
 
-@media screen and (max-width:1640px) {
+@media screen and (max-width:1700px) {
 	.content{
-		width: 100%;
+		width: 98%;
+		margin-left: auto;
+		margin-right: auto;
 		padding: 0 8px;
 	}
 }
@@ -181,20 +201,26 @@ footer p {
 	.content{
 		overflow-x: auto;
 	}
+
     .shape {
         display: none;
 	}
+
 	footer{
-		width: 100vw;
+		width: 100%;
 		position: relative;
 		justify-content: center;
 		background-color: #2C5696;
 		right: initial;
 	}
+
 	footer p {
 		position: relative;
 	}
-	
 }
 
-	
+@media screen and (max-width: 600px) {
+	.img {
+		display: none;
+	}
+}	
