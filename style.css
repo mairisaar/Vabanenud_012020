@@ -149,10 +149,19 @@ th{
 	background-color: #2C5696;
 	color: #ffffff;
 	font-weight: normal;
+	text-align: left;
 }
 
 tr{
 	word-wrap: initial;
+}
+
+td{
+	text-align: center;
+}
+
+td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4){
+    text-align: left;
 }
 
 tr:nth-child(odd) {
@@ -194,6 +203,10 @@ footer p {
 		margin-left: auto;
 		margin-right: auto;
 		padding: 0 8px;
+	}
+
+	.collapsible {
+		margin-top: 24px;
 	}
 }
 
