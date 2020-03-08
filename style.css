@@ -123,8 +123,7 @@ p {
 	font-weight: normal;
 	content: 'keyboard_arrow_up';
  }
-  
-  
+
 .content {
 	width: 80%;
 	margin-right: auto;
@@ -149,8 +148,11 @@ p {
 .searchfield {
 	width: 50%; 
 	padding: 8px 48px; 
-	border: 1px solid #ddd; 
+	border: 2px solid #f1f1f1; 
 	border-radius: 40px;
+}
+input:focus{
+	outline-width: 0px;
 }
 
 /*Table style*/
@@ -170,28 +172,24 @@ th{
 	font-weight: normal;
 	text-align: left;
 }
-
 tr{
 	word-wrap: initial;
 	border-top: #f1f1f1 solid 2px;
 }
-
 td{
 	text-align: center;
 }
-
 td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4){
     text-align: left;
 }
-
 /*tr:nth-child(odd) {
 	background-color: #f1f1f1;
 }*/
-  
-tr:hover{
+/*tr:hover{
 	background-color: rgba(16, 32, 100, 0.1);
-}
+}*/
 
+/*Footer style*/
 footer {
 	bottom: 0;
 	height: 160px;
@@ -199,7 +197,6 @@ footer {
 	justify-content: flex-end;
 	margin-right: 80px;
 }
-
 footer p {
     position: absolute;
     color: #ffffff;
@@ -208,7 +205,6 @@ footer p {
 	font-weight: 500;
 	width: 300px;
 }
-
 .shape {
     background-color: #2C5696;
     z-index: -1;

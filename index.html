@@ -55,9 +55,7 @@
    	        <input type="text" id="myInput" class="searchfield" onkeyup="mySearch()" placeholder="Õppekava">
         </div>
 
-        <div class="data">
-            <p id="showData"></p>
-        </div>
+        <div class="data" id="showData"></div>
 
     </section>
     <footer>
@@ -101,188 +99,8 @@
             }
         }
 
-
         //tabeli kuvamine
         //json
-
-        var myData1 = [
-            
-            {
-                "Valdkond": "HV",
-                "Tase": "514",
-                "Kood": "120187",
-                "Õppekava": "Infokorraldus",
-                "1. aasta PÕ": "",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "",
-                "2. aasta SÕ": "2",
-                "3. aasta PÕ": "5",
-                "3. aasta SÕ": "6",
-                "4. aasta PÕ": "",
-                "4. aasta SÕ": "",
-                "5. aasta PÕ": "",
-                "5. aasta SÕ": "",
-                "6. aasta PÕ": "",
-                "6. aasta SÕ": ""
-            },
-            {
-                "Valdkond": "SV",
-                "Tase": "511",
-                "Kood": "3132",
-                "Õppekava": "Koolieelse lasteasutuse õpetaja mitmekeelses õppekeskkonnas	",
-                "1. aasta PÕ": "",
-                "1. aasta SÕ": "1",
-                "2. aasta PÕ": "",
-                "2. aasta SÕ": "",
-                "3. aasta PÕ": "6",
-                "3. aasta SÕ": "1",
-                "4. aasta PÕ": "",
-                "4. aasta SÕ": "",
-                "5. aasta PÕ": "",
-                "5. aasta SÕ": "",
-                "6. aasta PÕ": "",
-                "6. aasta SÕ": ""
-            },
-            {
-                "Valdkond": "MV",
-                "Tase": "503",
-                "Kood": "80418",
-                "Õppekava": "Arstiteadus",
-                "1. aasta PÕ": "3",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "17",
-                "2. aasta SÕ": "",
-                "3. aasta PÕ": "32",
-                "3. aasta SÕ": "",
-                "4. aasta PÕ": "31",
-                "4. aasta SÕ": "",
-                "5. aasta PÕ": "44",
-                "5. aasta SÕ": "",
-                "6. aasta PÕ": "38",
-                "6. aasta SÕ": ""
-            },
-            {
-                "Valdkond": "LT",
-                "Tase": "511",
-                "Kood": "144301",
-                "Õppekava": "Füüsika, keemia ja materjaliteadus	",
-                "1. aasta PÕ": "7",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "24",
-                "2. aasta SÕ": "",
-                "3. aasta PÕ": "47",
-                "3. aasta SÕ": "",
-                "4. aasta PÕ": "",
-                "4. aasta SÕ": "",
-                "5. aasta PÕ": "",
-                "5. aasta SÕ": "",
-                "6. aasta PÕ": "",
-                "6. aasta SÕ": ""
-            }
-        ]
-
-        var myData2 = [
-            
-            {
-                "Valdkond": "HV",
-                "Tase": "614",
-                "Kood": "136599",
-                "Õppekava": "Võõrkeeleõpetaja",
-                "1. aasta PÕ": "2",
-                "1. aasta SÕ": "1",
-                "2. aasta PÕ": "1",
-                "2. aasta SÕ": "3"
-            },
-            {
-                "Valdkond": "SV",
-                "Tase": "614",
-                "Kood": "162797",
-                "Õppekava": "Kesk- ja Ida-Euroopa, Venemaa ja Euraasia uuringud	",
-                "1. aasta PÕ": "10",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "10",
-                "2. aasta SÕ": ""
-            },
-            {
-                "Valdkond": "MV",
-                "Tase": "614",
-                "Kood": "2625",
-                "Õppekava": "Rahvatervishoid",
-                "1. aasta PÕ": "1",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "17",
-                "2. aasta SÕ": ""
-            },
-            {
-                "Valdkond": "LT",
-                "Tase": "5614",
-                "Kood": "144919",
-                "Õppekava": "Infotehnoloogia mitteinformaatikutele",
-                "1. aasta PÕ": "",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "",
-                "2. aasta SÕ": "1"
-            }
-        ]
-        var myData3 = [
-            
-            {
-                "Valdkond": "HV",
-                "Tase": "734",
-                "Kood": "80354",
-                "Õppekava": "Eesti ja soome-ugri keeleteadus",
-                "1. aasta PÕ": "",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "",
-                "2. aasta SÕ": "",
-                "3. aasta PÕ": "",
-                "3. aasta SÕ": "",
-                "4. aasta PÕ": "2",
-                "4. aasta SÕ": ""
-            },
-            {
-                "Valdkond": "SV",
-                "Tase": "734",
-                "Kood": "80338",
-                "Õppekava": "Haridusteadus (LT)",
-                "1. aasta PÕ": "",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "",
-                "2. aasta SÕ": "",
-                "3. aasta PÕ": "",
-                "3. aasta SÕ": "",
-                "4. aasta PÕ": "1",
-                "4. aasta SÕ": ""
-            },
-            {
-                "Valdkond": "MV",
-                "Tase": "734",
-                "Kood": "80360",
-                "Õppekava": "Arstiteadus",
-                "1. aasta PÕ": "",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "1",
-                "2. aasta SÕ": "",
-                "3. aasta PÕ": "2",
-                "3. aasta SÕ": "",
-                "4. aasta PÕ": "1",
-                "4. aasta SÕ": ""
-            },
-            {
-                "Valdkond": "LT",
-                "Tase": "734",
-                "Kood": "80615",
-                "Õppekava": "Tehnika ja tehnoloogia",
-                "1. aasta PÕ": "1",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "1",
-                "2. aasta SÕ": "",
-                "3. aasta PÕ": "1",
-                "3. aasta SÕ": "",
-                "4. aasta PÕ": "3",
-                "4. aasta SÕ": ""
-            }
-        ]
 
         var myData = [
             {
@@ -292,7 +110,8 @@
                 "Õppekava": "Infokorraldus",
                 "2. aasta SÕ": "2",
                 "3. aasta PÕ": "5",
-                "3. aasta SÕ": "6"            },
+                "3. aasta SÕ": "6"            
+            },
             {
                 "Valdkond": "SV",
                 "Tase": "511",
@@ -300,7 +119,8 @@
                 "Õppekava": "Koolieelse lasteasutuse õpetaja mitmekeelses õppekeskkonnas	",
                 "1. aasta SÕ": "1",
                 "3. aasta PÕ": "6",
-                "3. aasta SÕ": "1"            },
+                "3. aasta SÕ": "1"            
+            },
             {
                 "Valdkond": "MV",
                 "Tase": "503",
@@ -311,7 +131,8 @@
                 "3. aasta PÕ": "32",
                 "4. aasta PÕ": "31",
                 "5. aasta PÕ": "44",
-                "6. aasta PÕ": "38"            },
+                "6. aasta PÕ": "38"            
+            },
             {
                 "Valdkond": "LT",
                 "Tase": "511",
@@ -319,7 +140,8 @@
                 "Õppekava": "Füüsika, keemia ja materjaliteadus	",
                 "1. aasta PÕ": "7",
                 "2. aasta PÕ": "24",
-                "3. aasta PÕ": "47"            },
+                "3. aasta PÕ": "47"           
+            },
             {
                 "Valdkond": "HV",
                 "Tase": "614",
@@ -336,14 +158,16 @@
                 "Kood": "162797",
                 "Õppekava": "Kesk- ja Ida-Euroopa, Venemaa ja Euraasia uuringud	",
                 "1. aasta PÕ": "10",
-                "2. aasta PÕ": "10"            },
+                "2. aasta PÕ": "10"           
+            },
             {
                 "Valdkond": "MV",
                 "Tase": "614",
                 "Kood": "2625",
                 "Õppekava": "Rahvatervishoid",
                 "1. aasta PÕ": "1",
-                "2. aasta PÕ": "17"            },
+                "2. aasta PÕ": "17"            
+            },
             {
                 "Valdkond": "LT",
                 "Tase": "5614",
@@ -356,13 +180,15 @@
                 "Tase": "734",
                 "Kood": "80354",
                 "Õppekava": "Eesti ja soome-ugri keeleteadus",
-                "4. aasta PÕ": "2"            },
+                "4. aasta PÕ": "2"            
+            },
             {
                 "Valdkond": "SV",
                 "Tase": "734",
                 "Kood": "80338",
                 "Õppekava": "Haridusteadus (LT)",
-                "4. aasta PÕ": "1"            },
+                "4. aasta PÕ": "1"            
+            },
             {
                 "Valdkond": "MV",
                 "Tase": "734",
@@ -370,7 +196,8 @@
                 "Õppekava": "Arstiteadus",
                 "2. aasta PÕ": "1",
                 "3. aasta PÕ": "2",
-                "4. aasta PÕ": "1"            },
+                "4. aasta PÕ": "1"            
+            },
             {
                 "Valdkond": "LT",
                 "Tase": "734",
@@ -387,48 +214,68 @@
         function CreateTableFromJSON(id, data) {
    	 
         //tabeli päise jaoks andmete leidmine
-             var col = [];
-             for (var i = 0; i < data.length; i++) {
-                 for (var key in data[i]) {
-                     if (col.indexOf(key) === -1) {
-                         col.push(key);
-                     }
-                 }
-             }
+            //var col = [];
+            //for (var i = 0; i < data.length; i++) {
+                //for (var key in data[i]) {
+                    //if (col.indexOf(key) === -1) {
+                    //    col.push(key);
+                    //}
+                //}
+            //}
+            var col = [
+                "Valdkond",
+                "Tase",
+                "Kood",
+                "Õppekava",
+                "1. aasta PÕ",
+                "1. aasta SÕ",
+                "2. aasta PÕ", 
+                "2. aasta SÕ",
+                "3. aasta PÕ",
+                "3. aasta SÕ",
+                "4. aasta PÕ",
+                "4. aasta SÕ",
+                "5. aasta PÕ",
+                "5. aasta SÕ",
+                "6. aasta PÕ",
+                "6. aasta SÕ"]
+
  
-             // dünaamilise tabeli loomine
-             var table = document.createElement("table");
+            // dünaamilise tabeli loomine
+            var table = document.createElement("table");
  
-             // tabeli päise loomine leitud andmete abil
- 
+            // tabeli päise loomine leitud andmete abil
              var tr = table.insertRow(-1);               	// tabeli rida
  
-             for (var i = 0; i < col.length; i++) {
-                 var th = document.createElement("th");  	// tabeli päis
-                 th.innerHTML = col[i];
-                 tr.appendChild(th);
-             }
+            for (var i = 0; i < col.length; i++) {
+                var th = document.createElement("th");  	// tabeli päis
+                th.innerHTML = col[i];
+                tr.appendChild(th);
+            }
  
-             // jsoni andmete lisamine tabelisse ridadena
-             for (var i = 0; i < data.length; i++) {
+            // jsoni andmete lisamine tabelisse ridadena
+            for (var i = 0; i < data.length; i++) {
  
-                 tr = table.insertRow(-1);
+                tr = table.insertRow(-1);
  
-                 for (var j = 0; j < col.length; j++) {
-                     var tabCell = tr.insertCell(-1);
-                     tabCell.innerHTML = data[i][col[j]];
-                     if (data[i][col[j]] == undefined){
-                        tabCell.innerHTML = "";
-                     }
-                 }
-             }
+                for (var j = 0; j < col.length; j++) {
+                    var tabCell = tr.insertCell(-1);
+                    tabCell.innerHTML = data[i][col[j]];
+                    if (data[i][col[j]] == undefined){
+                       tabCell.innerHTML = "";
+                    }
+                    if ([col[j]] == "Õppekava"){
+                       tabCell.innerHTML = data[i][col[j]].link("https://ois2.ut.ee/#/curricula/"+String(data[i][col[j-1]]));
+                    }
+                }
+            }
  
-             // loodud jsoni andmetega tabeli lisamine konteinerisse
-             var divContainer = document.getElementById(id);
-             divContainer.innerHTML = "";
-             divContainer.appendChild(table);
+            // loodud jsoni andmetega tabeli lisamine konteinerisse
+            var divContainer = document.getElementById(id);
+            divContainer.innerHTML = "";
+            divContainer.appendChild(table);
  
-     }
+    }
          
         //CreateTableFromJSON("showDataB", myData1);
         //CreateTableFromJSON("showDataM", myData2);
