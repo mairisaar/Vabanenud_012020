@@ -79,7 +79,7 @@ p {
 	margin-top: 24px;
 }
 
-.info {
+.info, .search, .data{
 	width: 80vw;
 	margin-right: auto;
 	margin-left: auto;
@@ -134,6 +134,25 @@ p {
 	transition: max-height 0.2s ease-out;
  }
 
+ /*Search style*/
+.search{
+   display:flex;
+   align-items: center;
+   margin-top: 80px;
+}
+.search-icon{
+    position:absolute;
+    z-index: 1;
+    padding: 0px 16px;
+    align-self: center;
+}
+.searchfield {
+	width: 50%; 
+	padding: 8px 48px; 
+	border: 1px solid #ddd; 
+	border-radius: 40px;
+}
+
 /*Table style*/
 table {
 	font-size: 16px;
@@ -154,6 +173,7 @@ th{
 
 tr{
 	word-wrap: initial;
+	border-top: #f1f1f1 solid 2px;
 }
 
 td{
@@ -164,13 +184,13 @@ td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4){
     text-align: left;
 }
 
-tr:nth-child(odd) {
+/*tr:nth-child(odd) {
 	background-color: #f1f1f1;
-  }
-  
-/*tr:hover{
-	background-color: rgba(16, 32, 100, 0.1);
 }*/
+  
+tr:hover{
+	background-color: rgba(16, 32, 100, 0.1);
+}
 
 footer {
 	bottom: 0;
@@ -205,6 +225,13 @@ footer p {
 		padding: 0 8px;
 	}
 
+	.data{
+		width: 98%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 8px;
+	}
+
 	.collapsible {
 		margin-top: 24px;
 	}
@@ -213,6 +240,14 @@ footer p {
 @media screen and (max-width: 1380px) {
 	.content{
 		overflow-x: auto;
+	}
+
+	.data{
+		overflow: auto;
+	}
+
+	.searchfield {
+		width: 100%;
 	}
 
     .shape {
