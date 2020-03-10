@@ -74,6 +74,7 @@ h1 {
 	line-height: 3rem;
 	margin-top: 120px;
 }
+
 p {
 	font-size: 16px;
 	margin-top: 24px;
@@ -83,7 +84,10 @@ p {
 	width: 80vw;
 	margin-right: auto;
 	margin-left: auto;
-	margin-bottom: 60px;
+}
+
+.info, .data{
+	margin-bottom: 80px;
 }
 
 .levels{
@@ -137,7 +141,8 @@ p {
 .search{
    display:flex;
    align-items: center;
-   margin-top: 80px;
+   margin-bottom: 40px;
+
 }
 .search-icon{
     position:absolute;
