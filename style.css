@@ -6,7 +6,6 @@ body {
 	color: #2C5696;
 	line-height: 145%;
 }
-
 .clearfix:after {
 	content: "";
 	display: table;
@@ -20,32 +19,27 @@ header {
 	justify-content: flex-end;
 	align-items: center;
 }
-
 .beauty {
 	display: flex;
 	flex-direction: row;
 	z-index: -1;
 	margin-right: 40px;
 }
-
 .main, .light, .shape {
 	width: 300px;
 	height: 200px;
 }
-
 .main {
 	background-color: #2C5696;
 	transform: rotate(-15deg);
 	z-index: -1;
 }
-
 .light {
 	position: absolute;
 	right: 300px;
 	background-color: #00A6E6;
 	transform: rotate(-45deg);
 }
-
 .img {
 	width: 342px;
 	height: 271px;
@@ -56,7 +50,6 @@ header {
 	position: absolute;
 	right: 360px;
 }
-	
 .logo{
 	position: absolute;
 	height: 64px;
@@ -69,20 +62,16 @@ header {
 a{
 	color: #00A6E6;
 }
-
 a:visited {
     color: #2C5696;
 }
-
 a:active {
     text-decoration: none;
 }
-
 a:focus {
     outline: none;
     color: #00A6E6;
 }
-
 h1 {
 	font-weight: 700;
 	font-size: 36px;
@@ -90,78 +79,26 @@ h1 {
 	line-height: 3rem;
 	margin-top: 120px;
 }
-
 h2 {
 	font-size: 18px;
 	font-weight: 700;
 }
-
 h3 {
     font-size: 12px;
     font-weight: lighter;
 }
-
 p {
 	font-size: 16px;
 	margin-top: 24px;
 }
-
 .info, .search, .data{
 	width: 80vw;
 	margin-right: auto;
 	margin-left: auto;
 }
-
 .info, .data{
 	margin-bottom: 80px;
 }
-
-/*.levels{
-	margin-bottom: 60px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.collapsible {
-	background-color: #ffffff;
-	cursor: pointer;
-	padding: 18px;
-	width: 80vw;
-	border: none;
-	text-align: center;
-	outline: none;
-	font-size: 24px;
-	font-weight: 500;
-	color: #2C5696;
- }
-  
-.active, .collapsible:hover {
-	background-color: #f1f1f1;
- }
-
-.collapsible:after {
-	font-family: 'Material Icons';
-	font-weight: normal;
-	content: 'keyboard_arrow_down';
-	font-size: 24px;
-	float: right;
- }
-  
-.active:after {
-	font-family: 'Material Icons';
-	font-weight: normal;
-	content: 'keyboard_arrow_up';
- }
-
-.content {
-	width: 80%;
-	margin-right: auto;
-	margin-left: auto;
-	max-height: 0; 
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
- }*/
 
  /*otsingu stiil*/
 .search{
@@ -301,35 +238,7 @@ footer p {
 }
 
 /*seadme laiusega kohandumine*/
-/*ekraani laius kuni 1700px
-@media screen and (max-width:1700px) {
-	.content{
-		width: 98%;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 0 8px;
-	}
-
-	.data{
-		width: 98%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.collapsible {
-		margin-top: 24px;
-	}
-}*/
-
 @media screen and (max-width: 1380px) {
-	/*.content{
-		overflow-x: auto;
-	}
-
-	.data{
-		overflow: auto;
-	}*/
-
 	.searchfield {
 		width: 100%;
 	}
