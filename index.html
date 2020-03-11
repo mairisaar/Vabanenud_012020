@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/favicon-32.png" type="image/x-icon">
-    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
     <link type="text/css" rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap" rel="stylesheet">
@@ -13,6 +12,7 @@
     <title>Vabanenud õppekohad Tartu Ülikoolis</title>
 </head>
 <body>
+    <!--päis-->
     <header>
         <div class="beauty">
             <div class="img"></div>
@@ -21,134 +21,118 @@
         </div>
         <img class="logo"src="img/horisontaal-v.svg" alt="Tartu Ülikooli logo">
     </header>
+
+    <!--sisu-->
     <section>
         
-        <!---üldinfo-->
+        <!---üldinfo tekst-->
         <div class="info">
             <h1>Vabanenud õppekohad Tartu Ülikoolis</h1>
+            
             <p>Vastavalt Tartu Ülikooli <a href="http://www.ut.ee/oke" target="_blank">õppekorralduseeskirjale</a> täidetakse vabad õppekohad avaliku konkursi korras semestri algusest arvates nelja nädala jooksul. Esimese õppeaasta sügissemestril vabu õppekohti ei täideta.</p>
             <p>Lisainfo <a href="https://www.ut.ee/et/oppimine/uliopilasele/oppekohad/vabad_kohad" target="_blank">vabale õppekohale kandideerimise kohta</a>.</p>
+            
+            <!--Andmed seisuga kuupäev-->
             <p id="showDate1"></p>
         </div>
 
-        <!---õppeastmete collapsible pealkirjad
-        <div class="levels">
-            <button type="button" class="collapsible">Bakalaureuse-, rakenduskõrghariduse- ja integreeritud õppes</button>
-            <div class="content">
-                <p id="showDate2"></p>
-                <p id="showDataB"></p>
-            </div>
-            <button type="button" class="collapsible">Magistriõppes</button>
-            <div class="content">
-                <p id="showDate3"></p>
-                <p id="showDataM"></p>
-            </div>
-            <button type="button" class="collapsible">Doktoriõppes</button>
-            <div class="content">
-                <p id="showDate4"></p>
-                <p id="showDataD"></p>
-            </div>
-        </div>-->
-
+        <!--otsinguväli-->
         <div class="search">
             <i class="material-icons search-icon">search</i>
    	        <input type="text" id="myInput" class="searchfield" onkeyup="mySearch()" placeholder="Õppekava, valdkond, tase või kood">
         </div>
 
+        <!--tabel andmetega-->
         <div class="data" id="showData"></div>
-
     </section>
+
+    <!--jalus-->
     <footer>
         <p>Õppeosakond ois.tugi@ut.ee</p>
         <div class="shape"></div>
     </footer>
 
-    <!--Mõistete pop-up aken-->
-
-<div id="pop-up" class="overlay">
-    <div class="modal">
-   	 <div class="modal-content">
-   		 <div class="modal-content-h">
-   			 <h1>Valdkonnad</h1>
-   		 </div>
-   		 <div class="modal-content-p">
-   			 <a class="close" href="#">&times;</a>
-   			 
-   			 <div class="term">
-   				 <h2>HV</h2>
-   				 <p>humanitaarteaduste ja kunstide valdkond</p>
-   			 </div>
-   			 <div class="term">
-   				 <h2>SV</h2>
-   				 <p>sotsiaalteaduste valdkond</p>
-   			 </div>
-   			 <div class="term">
-   				 <h2>MV</h2>
-   				 <p>meditsiiniteaduste valdkond</p>
-   			 </div>
-   			 <div class="term">
-   				 <h2>LT</h2>
-   				 <p>loodus- ja täppisteaduste valdkond</p>
-   			 </div>
-   		 </div>
-   	 </div>
-   	 <div class="modal-content">
-   		 <div class="modal-content-h">
-   			 <h1>Tasemed</h1>
-   			 <h3>HTM õppekava haridustase</h3>
-   		 </div>
-   		 <a class="close" href="#">&times;</a>
-   		 <div class="modal-content-p">
-   			 <div class="modal-content-p-sub">
-   				 <h3>Kõrghariduse 1. aste</h3>
-   				 <div class="term">
-   					 <h2>503</h2>
-   					 <p>integreeritud õpe (bakalaureuseõpe + magistriõpe)</p>
-   				 </div>
-   				 <div class="term">
-   					 <h2>511</h2>
-   					 <p>bakalaureuseõpe</p>
-   				 </div>
-   				 <div class="term">
-   					 <h2>514</h2>
-   					 <p>rakenduskõrgharidusõpe</p>
-   				 </div>
-   			 </div>
-   			 <div class="modal-content-p-sub">
-   				 <h3>Kõrghariduse 2. aste</h3>
-   				 <div class="term">
-   					 <h2>614</h2>
-   					 <p>magistriõpe (3+2)</p>
-   				 </div>
-   			 </div>
-   			 <div class="modal-content-p-sub">    
-   				 <h3>Kõrghariduse 3. aste</h3>
-   				 <div class="term">
-   					 <h2>734</h2>
-   					 <p>doktoriõpe</p>
-   				 </div>
-   			 </div>
-   		 </div>
-   	 </div>
+    <!--mõistete pop-up aken-->
+    <div id="pop-up" class="overlay"> <!--pooleldi läbipaistev overlay-->
+        <div class="modal"><!--pop-up aken-->
+            <a class="close" href="#">&times;</a> <!--ristike pop-up akna sulgemiseks-->
+            <div class="modal-content"><!--valdkondade selgitus-->
+                <div class="modal-content-h">
+                    <h1>Valdkonnad</h1>
+                </div>
+                <div class="modal-content-p">
+                    <div class="term">
+                        <h2>HV</h2>
+                        <p>humanitaarteaduste ja kunstide valdkond</p>
+                    </div>
+                    <div class="term">
+                        <h2>SV</h2>
+                        <p>sotsiaalteaduste valdkond</p>
+                    </div>
+                    <div class="term">
+                        <h2>MV</h2>
+                        <p>meditsiiniteaduste valdkond</p>
+                    </div>
+                    <div class="term">
+                        <h2>LT</h2>
+                        <p>loodus- ja täppisteaduste valdkond</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-content"><!--tasemete selgitus-->
+                <div class="modal-content-h">
+                    <h1>Tasemed</h1>
+                    <h3>HTM õppekava haridustase</h3>
+                </div>
+                <div class="modal-content-p">
+                    <div class="modal-content-p-sub">
+                        <h3>Kõrghariduse 1. aste</h3>
+                        <div class="term">
+                            <h2>503</h2>
+                            <p>integreeritud õpe (bakalaureuseõpe + magistriõpe)</p>
+                        </div>
+                        <div class="term">
+                            <h2>511</h2>
+                            <p>bakalaureuseõpe</p>
+                        </div>
+                        <div class="term">
+                            <h2>514</h2>
+                            <p>rakenduskõrgharidusõpe</p>
+                        </div>
+                    </div>
+                    <div class="modal-content-p-sub">
+                        <h3>Kõrghariduse 2. aste</h3>
+                        <div class="term">
+                            <h2>614</h2>
+                            <p>magistriõpe (3+2)</p>
+                        </div>
+                    </div>
+                    <div class="modal-content-p-sub">    
+                        <h3>Kõrghariduse 3. aste</h3>
+                        <div class="term">
+                            <h2>734</h2>
+                            <p>doktoriõpe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
-    
+<!--javascript-->
     <script>
-        // Andmed seisuga kuupäeva kuvamine
+
+        // andmed seisuga kuupäeva kuvamine
         function ShowUpdateDate(id){
         var myDate = {kuupäev: "26.01.2020", kell: "01:23"};
         document.getElementById(id).innerHTML = "Andmed seisuga " + myDate.kuupäev + " kell " + myDate.kell;
         }
 
-        ShowUpdateDate("showDate1");
-        //ShowUpdateDate("showDate2");
-        //ShowUpdateDate("showDate3");
-        //ShowUpdateDate("showDate4");
+        ShowUpdateDate("showDate1"); //kutsun funktsiooni välja
 
-        //Otsing tabelist
-
+        //otsing tabelist valdkonna, koodi, taseme ja õppekava nimetuse järgi
         function mySearch() {
+
         // muutujad
             var input, filter, table, tr, td, i, txtValue;
             input = document.getElementById("myInput");
@@ -177,8 +161,7 @@
         }
 
         //tabeli kuvamine
-        //json
-
+        //json objekt
         var myData = [
             {
                 "Valdkond": "HV",
@@ -287,10 +270,10 @@
             }
         ]
 
-        //funktsioon
+        //funktsioon tabeli loomiseks
         function CreateTableFromJSON(id, data) {
    	 
-        //tabeli päise jaoks andmete leidmine
+        //tabeli päise jaoks andmete leidmine --- ei kasutata
             //var col = [];
             //for (var i = 0; i < data.length; i++) {
                 //for (var key in data[i]) {
@@ -299,6 +282,7 @@
                     //}
                 //}
             //}
+            // tabeli veerud
             var col = [
                 "Valdkond",
                 "Tase",
@@ -338,12 +322,15 @@
                 for (var j = 0; j < col.length; j++) {
                     var tabCell = tr.insertCell(-1);
                     tabCell.innerHTML = data[i][col[j]];
+                    //väärtuseta andmeväljad kuvada tühjana, mitte tekst 'undefined'
                     if (data[i][col[j]] == undefined){
                        tabCell.innerHTML = "";
                     }
+                    //õppekava nimetus lingiks ÕIS2 õppekava üldandmete lehele
                     if ([col[j]] == "Õppekava"){
                        tabCell.innerHTML = data[i][col[j]].link("https://ois2.ut.ee/#/curricula/"+String(data[i][col[j-1]]));
                     }
+                    //valdkond ja tase lingiks, avavad mõistete selgituse pop-up akna
                     if ([col[j]] == "Valdkond" || [col[j]] == "Tase"){
                         tabCell.innerHTML = data[i][col[j]].link("#pop-up")
                     }
@@ -355,27 +342,9 @@
             divContainer.innerHTML = "";
             divContainer.appendChild(table);
     }
-         
-        //CreateTableFromJSON("showDataB", myData1);
-        //CreateTableFromJSON("showDataM", myData2);
-        //CreateTableFromJSON("showDataD", myData3);
+
+        //kutsun tabeli loomise funktsiooni välja
         CreateTableFromJSON("showData", myData);
-
-        //collapsible headings - need on välja jäetud
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-            content.style.maxHeight = null;
-            } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-            } 
-        });
-        }
     </script>
 </body>
 </html>
