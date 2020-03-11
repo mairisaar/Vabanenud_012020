@@ -67,12 +67,37 @@ a{
 	/*text-decoration: none;*/
 	color: #00A6E6;
 }
+
+a:visited {
+    color: #2C5696;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    color: #00A6E6;
+}
+
+
 h1 {
 	font-weight: 700;
 	font-size: 36px;
 	margin-bottom: 48px;
 	line-height: 3rem;
 	margin-top: 120px;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+h3 {
+    font-size: 12px;
+    font-weight: lighter;
 }
 
 p {
@@ -156,8 +181,12 @@ p {
 	border: 2px solid #f1f1f1; 
 	border-radius: 40px;
 }
+.search:focus-within{
+	color: #00A6E6;
+}
 input:focus{
-	outline-width: 0px;
+	outline: none;
+	border-color: #00A6E6;
 }
 
 /*Table style*/
@@ -216,6 +245,74 @@ footer p {
 	transform: rotate(-15deg);
 }
 
+.overlay{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 300ms ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+    max-width: 480px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 24px;
+    color: #2C5696;
+    border-radius: 2px;
+}
+
+.term {
+    display: flex;
+    flex-direction: block;
+    align-items: baseline;
+}
+
+.term p {
+    padding-left: 8px;
+}
+.modal h3, .modal h2, .modal h1, .modal p {
+    margin: 0;
+}
+
+.modal h3:nth-of-type{
+    margin-bottom: 8px;
+}
+
+.modal-content{
+    padding-top: 40px;
+}
+
+.modal-content-p , .modal-content-p-sub{
+    padding-top: 8px;
+}
+.close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  transition: all 200ms ease-in-out;
+  font-size: 36px;
+  text-decoration: none;
+}
+
+.close:hover {
+  color: #00A6E6;
+}
+
+
 /*Responsivnes*/
 
 @media screen and (max-width:1700px) {
@@ -230,7 +327,6 @@ footer p {
 		width: 98%;
 		margin-left: auto;
 		margin-right: auto;
-		padding: 0 8px;
 	}
 
 	.collapsible {
@@ -266,10 +362,97 @@ footer p {
 	footer p {
 		position: relative;
 	}
+
+	.data {
+		width: 60vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	table, tbody, th, td, tr{
+		display: block;
+	}
+		
+	/* Peida tabeli päis, aga mitte display: none;, accessibility eesmärgil) */
+	th{
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+		
+	tr{
+	border-bottom: 16px solid #f1f1f1;
+	}
+	   
+	/* Käitu nagu rida */
+	td{
+		border: none;
+		border-bottom: 1px solid #f1f1f1;
+		position: relative;
+		padding-left: 40%;
+		text-align: left;
+		display: flex;
+	    align-items: center;
+	}
+		
+	/*Tabeli päise asemel*/
+	td:before{
+		position: absolute;
+		left: 2px;
+		width: 30%;
+		padding-left: 8px;
+		white-space: nowrap;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		font-weight: normal;
+	}
+		
+	/*Lisan pealkirjad*/
+	td:nth-of-type(1):before {content: "Valdkond";}
+	td:nth-of-type(2):before {content: "Tase";}
+	td:nth-of-type(3):before {content: "Kood";}
+	td:nth-of-type(4):before {content: "Õppekava";}
+	td:nth-of-type(5):before {content: "1. aasta PÕ";}
+	td:nth-of-type(6):before {content: "1. aasta SÕ";}
+	td:nth-of-type(7):before {content: "2. aasta PÕ";}
+	td:nth-of-type(8):before {content: "2. aasta SÕ";}
+	td:nth-of-type(9):before {content: "3. aasta PÕ";}
+	td:nth-of-type(10):before {content: "3. aasta SÕ";}
+	td:nth-of-type(11):before {content: "4. aasta PÕ";}
+	td:nth-of-type(12):before {content: "4. aasta SÕ";}
+	td:nth-of-type(13):before {content: "5. aasta PÕ";}
+	td:nth-of-type(14):before {content: "5. aasta SÕ";}
+	td:nth-of-type(15):before {content: "6. aasta PÕ";}
+	td:nth-of-type(16):before {content: "6. aasta SÕ";}
+	}
+	
+@media screen and (max-width: 760px){
+	.data {
+		width: 80vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media screen and (max-width: 600px) {
 	.img {
 		display: none;
 	}
-}	
+    .modal h1 {
+   		font-size: 24px;
+    }
+    .modal h2 {
+   		font-size: 14px;
+    }
+    .modal h3, .modal p {
+   		font-size: 12px;
+    }
+    .close {
+   		font-size: 24px;
+    }
+    .modal-content{
+    	padding-top: 16px;
+    }
+
+}

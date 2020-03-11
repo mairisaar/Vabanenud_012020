@@ -52,7 +52,7 @@
 
         <div class="search">
             <i class="material-icons search-icon">search</i>
-   	        <input type="text" id="myInput" class="searchfield" onkeyup="mySearch()" placeholder="Õppekava">
+   	        <input type="text" id="myInput" class="searchfield" onkeyup="mySearch()" placeholder="Õppekava, valdkond, tase või kood">
         </div>
 
         <div class="data" id="showData"></div>
@@ -62,6 +62,77 @@
         <p>Õppeosakond ois.tugi@ut.ee</p>
         <div class="shape"></div>
     </footer>
+
+    <!--Mõistete pop-up aken-->
+
+<div id="pop-up" class="overlay">
+    <div class="modal">
+   	 <div class="modal-content">
+   		 <div class="modal-content-h">
+   			 <h1>Valdkonnad</h1>
+   		 </div>
+   		 <div class="modal-content-p">
+   			 <a class="close" href="#">&times;</a>
+   			 
+   			 <div class="term">
+   				 <h2>HV</h2>
+   				 <p>humanitaarteaduste ja kunstide valdkond</p>
+   			 </div>
+   			 <div class="term">
+   				 <h2>SV</h2>
+   				 <p>sotsiaalteaduste valdkond</p>
+   			 </div>
+   			 <div class="term">
+   				 <h2>MV</h2>
+   				 <p>meditsiiniteaduste valdkond</p>
+   			 </div>
+   			 <div class="term">
+   				 <h2>LT</h2>
+   				 <p>loodus- ja täppisteaduste valdkond</p>
+   			 </div>
+   		 </div>
+   	 </div>
+   	 <div class="modal-content">
+   		 <div class="modal-content-h">
+   			 <h1>Tasemed</h1>
+   			 <h3>HTM õppekava haridustase</h3>
+   		 </div>
+   		 <a class="close" href="#">&times;</a>
+   		 <div class="modal-content-p">
+   			 <div class="modal-content-p-sub">
+   				 <h3>Kõrghariduse 1. aste</h3>
+   				 <div class="term">
+   					 <h2>503</h2>
+   					 <p>integreeritud õpe (bakalaureuseõpe + magistriõpe)</p>
+   				 </div>
+   				 <div class="term">
+   					 <h2>511</h2>
+   					 <p>bakalaureuseõpe</p>
+   				 </div>
+   				 <div class="term">
+   					 <h2>514</h2>
+   					 <p>rakenduskõrgharidusõpe</p>
+   				 </div>
+   			 </div>
+   			 <div class="modal-content-p-sub">
+   				 <h3>Kõrghariduse 2. aste</h3>
+   				 <div class="term">
+   					 <h2>614</h2>
+   					 <p>magistriõpe (3+2)</p>
+   				 </div>
+   			 </div>
+   			 <div class="modal-content-p-sub">    
+   				 <h3>Kõrghariduse 3. aste</h3>
+   				 <div class="term">
+   					 <h2>734</h2>
+   					 <p>doktoriõpe</p>
+   				 </div>
+   			 </div>
+   		 </div>
+   	 </div>
+    </div>
+</div>
+
     
     <script>
         // Andmed seisuga kuupäeva kuvamine
@@ -273,6 +344,9 @@
                     if ([col[j]] == "Õppekava"){
                        tabCell.innerHTML = data[i][col[j]].link("https://ois2.ut.ee/#/curricula/"+String(data[i][col[j-1]]));
                     }
+                    if ([col[j]] == "Valdkond" || [col[j]] == "Tase"){
+                        tabCell.innerHTML = data[i][col[j]].link("#pop-up")
+                    }
                 }
             }
  
@@ -287,7 +361,7 @@
         //CreateTableFromJSON("showDataD", myData3);
         CreateTableFromJSON("showData", myData);
 
-        //collapsible headings
+        //collapsible headings - need on välja jäetud
         var coll = document.getElementsByClassName("collapsible");
         var i;
 
