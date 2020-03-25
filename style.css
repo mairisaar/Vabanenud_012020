@@ -73,6 +73,7 @@ a:visited {
 }
 a:hover{
 	text-decoration: none;
+	color: #00A6E6;
 }
 h1 {
 	font-weight: 700;
