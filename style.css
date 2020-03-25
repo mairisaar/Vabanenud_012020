@@ -62,15 +62,17 @@ header {
 a{
 	color: #00A6E6;
 }
-a:visited {
-    color: #2C5696;
-}
 a:active {
     text-decoration: none;
 }
 a:focus {
-    outline: none;
-    color: #00A6E6;
+	outline: 1px solid #00A6E6;
+}
+a:visited {
+	color: #1380BD;
+}
+a:hover{
+	text-decoration: none;
 }
 h1 {
 	font-weight: 700;
@@ -233,12 +235,21 @@ footer p {
   font-size: 36px;
   text-decoration: none;
 }
-.close:hover {
-  color: #00A6E6;
+.close:visited {
+	color: #2C5696;
 }
+.close:hover {
+	color: #00A6E6;
+  }
 
 /*seadme laiusega kohandumine*/
-@media screen and (max-width: 1380px) {
+@media screen and (max-width: 1600px){
+	.data {
+		width: 98vw;
+	}
+}
+
+@media screen and (max-width: 1350px) {
 	.searchfield {
 		width: 100%;
 	}
@@ -260,9 +271,28 @@ footer p {
 	}
 
 	.data {
-		width: 60vw;
+		width: 90vw;
+		overflow-x: scroll;
+	}
+
+	table {
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+}
+	
+@media screen and (max-width: 760px){
+	.empty {
+		display: none;
+	}
+
+	.data {
+		width: 80vw;
+		margin-left: auto;
+		margin-right: auto;
+		overflow-x: auto;
 	}
 
 	/*kuva kõik tabeli elemendid plokina*/
@@ -323,14 +353,6 @@ footer p {
 	td:nth-of-type(14):before {content: "5. aasta SÕ";}
 	td:nth-of-type(15):before {content: "6. aasta PÕ";}
 	td:nth-of-type(16):before {content: "6. aasta SÕ";}
-	}
-	
-@media screen and (max-width: 760px){
-	.data {
-		width: 80vw;
-		margin-left: auto;
-		margin-right: auto;
-	}
 }
 
 @media screen and (max-width: 600px) {

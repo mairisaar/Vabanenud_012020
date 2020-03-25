@@ -56,6 +56,21 @@
     <div id="pop-up" class="overlay"> <!--pooleldi läbipaistev overlay-->
         <div class="modal"><!--pop-up aken-->
             <a class="close" href="#">&times;</a> <!--ristike pop-up akna sulgemiseks-->
+            <div class="modal-content"><!--õppevormide selgitus-->
+                <div class="modal-content-h">
+                    <h1>Õppevormid</h1>
+                </div>
+                <div class="modal-content-p">
+                    <div class="term">
+                        <h2>PÕ</h2>
+                        <p>päevaõpe</p>
+                    </div>
+                    <div class="term">
+                        <h2>SÕ</h2>
+                        <p>sessioonõpe</p>
+                    </div>
+                </div>
+            </div>
             <div class="modal-content"><!--valdkondade selgitus-->
                 <div class="modal-content-h">
                     <h1>Valdkonnad</h1>
@@ -123,12 +138,12 @@
     <script>
 
         // andmed seisuga kuupäeva kuvamine
-        function ShowUpdateDate(id){
         var myDate = {kuupäev: "26.01.2020", kell: "01:23"};
-        document.getElementById(id).innerHTML = "Andmed seisuga " + myDate.kuupäev + " kell " + myDate.kell;
+        function ShowUpdateDate(id, date){
+        document.getElementById(id).innerHTML = "Andmed seisuga " + date.kuupäev + " kell " + date.kell;
         }
 
-        ShowUpdateDate("showDate1"); //kutsun funktsiooni välja
+        ShowUpdateDate("showDate1", myDate); //kutsun funktsiooni välja
 
         //otsing tabelist valdkonna, koodi, taseme ja õppekava nimetuse järgi
         function mySearch() {
@@ -273,7 +288,7 @@
         //funktsioon tabeli loomiseks
         function CreateTableFromJSON(id, data) {
    	 
-        //tabeli päise jaoks andmete leidmine --- ei kasutata
+        //tabeli päise jaoks andmete leidmine --- ei kasutata, sest veerud reastatakse suvalises järjekorras, mitte aastate ja õppevormi järgi kasvavalt
             //var col = [];
             //for (var i = 0; i < data.length; i++) {
                 //for (var key in data[i]) {
@@ -325,6 +340,7 @@
                     //väärtuseta andmeväljad kuvada tühjana, mitte tekst 'undefined'
                     if (data[i][col[j]] == undefined){
                        tabCell.innerHTML = "";
+                       tabCell.classList.add("empty");
                     }
                     //õppekava nimetus lingiks ÕIS2 õppekava üldandmete lehele
                     if ([col[j]] == "Õppekava"){
