@@ -32,12 +32,15 @@
             <p>Vastavalt Tartu Ülikooli <a href="http://www.ut.ee/oke" target="_blank">õppekorralduseeskirjale</a> täidetakse vabad õppekohad avaliku konkursi korras semestri algusest arvates nelja nädala jooksul. Esimese õppeaasta sügissemestril vabu õppekohti ei täideta.</p>
             <p>Lisainfo <a href="https://www.ut.ee/et/oppimine/uliopilasele/oppekohad/vabad_kohad" target="_blank">vabale õppekohale kandideerimise kohta</a>.</p>
             
-            <!--Andmed seisuga kuupäev-->
+            <!--lühendid-->
+            <a href="#pop-up">Lühendid</a>
+
+            <!--andmed seisuga kuupäev-->
             <p id="showDate1"></p>
         </div>
 
         <!--otsinguväli-->
-        <div class="search">
+        <div id="s" class="search">
             <i class="material-icons search-icon">search</i>
    	        <input type="text" id="myInput" class="searchfield" onkeyup="mySearch()" placeholder="Õppekava, valdkond, tase või kood">
         </div>
@@ -55,7 +58,7 @@
     <!--mõistete pop-up aken-->
     <div id="pop-up" class="overlay"> <!--pooleldi läbipaistev overlay-->
         <div class="modal"><!--pop-up aken-->
-            <a class="close" href="#">&times;</a> <!--ristike pop-up akna sulgemiseks-->
+            <a class="close" href="#s">&times;</a> <!--ristike pop-up akna sulgemiseks-->
             <div class="modal-content"><!--õppevormide selgitus-->
                 <div class="modal-content-h">
                     <h1>Õppevormid</h1>
