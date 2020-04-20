@@ -153,6 +153,7 @@ th{
 tr{
 	word-wrap: initial;
 	border-top: #f1f1f1 solid 1px;
+	z-index: 5;
 }
 td{
 	text-align: center;
@@ -239,7 +240,7 @@ footer p {
   position: absolute;
   top: 16px;
   right: 24px;
-  transition: all 200ms ease-in-out;
+  transition: all 50ms ease-in-out;
   font-size: 36px;
   text-decoration: none;
 }
