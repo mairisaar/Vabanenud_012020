@@ -158,7 +158,11 @@ td{
 	text-align: center;
 }
 td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4){
-    text-align: left;
+	text-align: left;
+}
+table th{
+	position: sticky;
+	top: 0;
 }
 
 /*jaluse stiil*/
@@ -297,6 +301,10 @@ footer p {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	table th{
+		position: sticky;
+		top: 0;
+	}
 
 }
 	
@@ -318,7 +326,7 @@ footer p {
 	}
 		
 	/*peida tabeli päis, aga mitte display: none;, accessibility eesmärgil)*/
-	th{
+	table th{
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
