@@ -152,7 +152,7 @@ th{
 }
 tr{
 	word-wrap: initial;
-	border-top: #f1f1f1 solid 2px;
+	border-top: #f1f1f1 solid 1px;
 }
 td{
 	text-align: center;
@@ -275,20 +275,9 @@ footer p {
 		width: 100%;
 	}
 
-    .shape {
-        display: none;
-	}
-
-	footer{
-		width: 100%;
-		position: relative;
+	footer {
 		justify-content: center;
-		background-color: #2C5696;
-		right: initial;
-	}
-
-	footer p {
-		position: relative;
+		margin-right: 0;
 	}
 
 	.data {
@@ -316,6 +305,22 @@ footer p {
 }
 	
 @media screen and (max-width: 760px){
+	.shape {
+        display: none;
+	}
+
+	footer{
+		width: 100%;
+		position: relative;
+		justify-content: center;
+		background-color: #2C5696;
+		right: initial;
+	}
+
+	footer p {
+		position: relative;
+	}
+
 	.empty {
 		display: none;
 	}
@@ -333,7 +338,7 @@ footer p {
 	}
 		
 	/*peida tabeli päis, aga mitte display: none;, accessibility eesmärgil)*/
-	table th{
+	table th, th:nth-child(4){
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
