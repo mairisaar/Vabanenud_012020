@@ -160,7 +160,7 @@ td{
 td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4){
 	text-align: left;
 }
-table th{
+table th{ /*tabeli päise rida jääb paigale kui kerida alla poole*/
 	position: sticky;
 	top: 0;
 }
@@ -293,7 +293,6 @@ footer p {
 
 	.data {
 		width: 90vw;
-		overflow-x: scroll;
 	}
 
 	table {
@@ -301,9 +300,17 @@ footer p {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	table th{
+
+	td:nth-child(4){
 		position: sticky;
-		top: 0;
+		left: 0;
+		z-index: 1;
+		background-color: #ffffff;
+	}
+	th:nth-child(4){
+		z-index: 2;
+		position: sticky;
+		left: 0;
 	}
 
 }
