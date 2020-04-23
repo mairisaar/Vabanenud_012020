@@ -449,4 +449,12 @@ footer p {
 	.img {
 		display: none;
 	}
+	.searchfield {
+		width: 100%;
+	}
+	.modal {
+		max-width: 600vw;
+		line-height: 0.98rem;
+	}
+
 }
