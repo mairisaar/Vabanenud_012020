@@ -1,5 +1,22 @@
 [
-    {"1. aasta PÕ":"3","1. aasta SÕ":"","2. aasta PÕ":"4","2. aasta SÕ":"","3. aasta PÕ":"10","3. aasta SÕ":"","4. aasta PÕ":"","4. aasta SÕ":"","5. aasta PÕ":"","5. aasta SÕ":"","6. aasta PÕ":"","6. aasta SÕ":"","Valdkond":"HV","Tase":"511","Kood":"2435","Õppekava":"Ajalugu"},
+    {
+        "Valdkond":"HV",
+        "Tase":"511",
+        "Kood":"2435",
+        "Õppekava":"Ajalugu",
+        "1. aasta PÕ":"3",
+        "1. aasta SÕ":"",
+        "2. aasta PÕ":"4",
+        "2. aasta SÕ":"",
+        "3. aasta PÕ":"10",
+        "3. aasta SÕ":"",
+        "4. aasta PÕ":"",
+        "4. aasta SÕ":"",
+        "5. aasta PÕ":"",
+        "5. aasta SÕ":"",
+        "6. aasta PÕ":"",
+        "6. aasta SÕ":""
+        },
     {"1. aasta PÕ":"1","1. aasta SÕ":"","2. aasta PÕ":"4","2. aasta SÕ":"","3. aasta PÕ":"6","3. aasta SÕ":"","4. aasta PÕ":"","4. aasta SÕ":"","5. aasta PÕ":"","5. aasta SÕ":"","6. aasta PÕ":"","6. aasta SÕ":"","Valdkond":"HV","Tase":"511","Kood":"2429","Õppekava":"Antiikkeeled ja -kultuurid"},
     {"1. aasta PÕ":"3","1. aasta SÕ":"","2. aasta PÕ":"10","2. aasta SÕ":"","3. aasta PÕ":"6","3. aasta SÕ":"","4. aasta PÕ":"","4. aasta SÕ":"","5. aasta PÕ":"","5. aasta SÕ":"","6. aasta PÕ":"","6. aasta SÕ":"","Valdkond":"HV","Tase":"511","Kood":"2416","Õppekava":"Eesti ja Soome-ugri keeleteadus"},
     {"1. aasta PÕ":"1","1. aasta SÕ":"","2. aasta PÕ":"5","2. aasta SÕ":"","3. aasta PÕ":"6","3. aasta SÕ":"","4. aasta PÕ":"","4. aasta SÕ":"","5. aasta PÕ":"","5. aasta SÕ":"","6. aasta PÕ":"","6. aasta SÕ":"","Valdkond":"HV","Tase":"511","Kood":"2437","Õppekava":"Filosoofia"},
