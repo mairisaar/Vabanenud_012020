@@ -37,6 +37,7 @@
 
             <!--andmed seisuga kuupäev-->
             <p id="showDate1"></p>
+
         </div>
 
         <!--otsinguväli-->
@@ -47,6 +48,8 @@
 
         <!--tabel andmetega-->
         <div class="data" id="showData"></div>
+
+
     </section>
 
     <!--jalus-->
@@ -147,7 +150,6 @@
         }
 
         ShowUpdateDate("showDate1", myDate); //kutsun funktsiooni välja
-
 
 
         //otsing tabelist valdkonna, koodi, taseme ja õppekava nimetuse järgi
@@ -383,6 +385,17 @@
         // **** !!!! seda ei ole vaja kui andmed loetakse failist
         CreateTableFromJSON("showData", myData); 
 
+        /*const fileInput = document.querySelector('#fileInput');
+            fileInput.addEventListener('change', (event) => {
+            // files is a FileList object (similar to NodeList) 
+            const files = event.target.files;
+
+            for (let file of files) {
+                const date = new Date(file.lastModified);
+                console.log(`${file.name} has a last modified date of ${date}`);
+            }
+            });*/
+        
     </script>
 
 </body>
