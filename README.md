@@ -65,3 +65,4 @@ Vaba koha foto autor on Mairi Saar.
 Leht on seadme laiusega kohanduv. Kitsamal ekraanil (nt mobiil) kuvatakse tabeli teistsugust vaadet.
 Iga tabeli rida kuvatakse eraldi plokina. 
 Peidetakse need veerud, kus andmeid ei ole (nt kui mingi õppekava 2. aasta SÕ vabu kohti ei ole, siis seda veergu (reana) ei kuvata.
+varu.html fail oli oluline arenduse jaoks. Selles failis loetakse andmed JSON järjendist, mitte failist.
