@@ -180,136 +180,10 @@
             }
         }
 
-
-
-
         //tabeli kuvamine
-        
-        //json objekt 
-        //**** !!!! see jätta välja, andmed võetakse failist
-        var myData = [
-            {
-                "Valdkond": "HV",
-                "Tase": "514",
-                "Kood": "120187",
-                "Õppekava": "Infokorraldus",
-                "1. aasta PÕ": "",
-                "1. aasta SÕ": "",
-                "2. aasta PÕ": "3",
-                "2. aasta SÕ": "2",
-                "3. aasta PÕ": "5",
-                "3. aasta SÕ": "6",
-                "4. aasta PÕ": "",
-                "4. aasta SÕ": "",
-                "5. aasta PÕ": "",
-                "5. aasta SÕ": "",
-                "6. aasta PÕ": "",
-                "6. aasta SÕ": ""            
-            },
-            {
-                "Valdkond": "SV",
-                "Tase": "511",
-                "Kood": "3132",
-                "Õppekava": "Koolieelse lasteasutuse õpetaja mitmekeelses õppekeskkonnas	",
-                "1. aasta SÕ": "1",
-                "3. aasta PÕ": "6",
-                "3. aasta SÕ": "1"            
-            },
-            {
-                "Valdkond": "MV",
-                "Tase": "503",
-                "Kood": "80418",
-                "Õppekava": "Arstiteadus",
-                "1. aasta PÕ": "3",
-                "2. aasta PÕ": "17",
-                "3. aasta PÕ": "32",
-                "4. aasta PÕ": "31",
-                "5. aasta PÕ": "44",
-                "6. aasta PÕ": "38"            
-            },
-            {
-                "Valdkond": "LT",
-                "Tase": "511",
-                "Kood": "144301",
-                "Õppekava": "Füüsika, keemia ja materjaliteadus	",
-                "1. aasta PÕ": "7",
-                "2. aasta PÕ": "24",
-                "3. aasta PÕ": "47"           
-            },
-            {
-                "Valdkond": "HV",
-                "Tase": "614",
-                "Kood": "136599",
-                "Õppekava": "Võõrkeeleõpetaja",
-                "1. aasta PÕ": "2",
-                "1. aasta SÕ": "1",
-                "2. aasta PÕ": "1",
-                "2. aasta SÕ": "3"
-            },
-            {
-                "Valdkond": "SV",
-                "Tase": "614",
-                "Kood": "162797",
-                "Õppekava": "Kesk- ja Ida-Euroopa, Venemaa ja Euraasia uuringud	",
-                "1. aasta PÕ": "10",
-                "2. aasta PÕ": "10"           
-            },
-            {
-                "Valdkond": "MV",
-                "Tase": "614",
-                "Kood": "2625",
-                "Õppekava": "Rahvatervishoid",
-                "1. aasta PÕ": "1",
-                "2. aasta PÕ": "17"            
-            },
-            {
-                "Valdkond": "LT",
-                "Tase": "614",
-                "Kood": "144919",
-                "Õppekava": "Infotehnoloogia mitteinformaatikutele",
-                "2. aasta SÕ": "1"
-            },
-            {
-                "Valdkond": "HV",
-                "Tase": "734",
-                "Kood": "80354",
-                "Õppekava": "Eesti ja soome-ugri keeleteadus",
-                "4. aasta PÕ": "2"            
-            },
-            {
-                "Valdkond": "SV",
-                "Tase": "734",
-                "Kood": "80338",
-                "Õppekava": "Haridusteadus (LT)",
-                "4. aasta PÕ": "1"            
-            },
-            {
-                "Valdkond": "MV",
-                "Tase": "734",
-                "Kood": "80360",
-                "Õppekava": "Arstiteadus",
-                "2. aasta PÕ": "1",
-                "3. aasta PÕ": "2",
-                "4. aasta PÕ": "1"            
-            },
-            {
-                "Valdkond": "LT",
-                "Tase": "734",
-                "Kood": "80615",
-                "Õppekava": "Tehnika ja tehnoloogia",
-                "1. aasta PÕ": "1",
-                "2. aasta PÕ": "1",
-                "3. aasta PÕ": "1",
-                "4. aasta PÕ": "3"
-            }
-        ]
-
-        //**** !!!!
-        //**** !!!!
-        //**** !!!!
-        // **** !!!! See osa tuleb väljakommenteerimisest vabastada  
+   
         //JSON failist andmete lugemine
-/*        
+       
         var fail = './andmed.json';
         var vabadeKohtadeAndmed = [];
 
@@ -320,7 +194,7 @@
         };
            
         getAndmed();
-*/
+
         //tabeli loomine
         function CreateTableFromJSON(id, data) {
    	 
@@ -375,13 +249,6 @@
             divContainer.innerHTML = "";
             divContainer.appendChild(table);
     }
-
-        //kutsun tabeli loomise funktsiooni välja
-        // **** !!!!
-        // **** !!!!
-        // **** !!!!
-        // **** !!!! seda ei ole vaja kui andmed loetakse failist
-        CreateTableFromJSON("showData", myData); 
 
     </script>
 

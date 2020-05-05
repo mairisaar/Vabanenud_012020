@@ -382,7 +382,8 @@ footer p {
 	}
 	.searchfield {
 		max-width: 100%;
-		min-width: 80%;
+		min-width: 70%;
+		padding: 8px 24px 8px 48px;
 	}
 
 	/*kuva kõik tabeli elemendid plokina*/
