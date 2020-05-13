@@ -54,8 +54,8 @@ header {
 }
 .logo{
 	position: absolute;
-	height: 64px;
-	width: auto;
+	width: 300px;
+	height: auto;
 	align-self: center;
 	right: 40px;
 }
