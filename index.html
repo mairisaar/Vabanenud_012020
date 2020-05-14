@@ -262,7 +262,7 @@
             var pair = variables[i].split("=");
             var name = decodeURIComponent(pair[0]);
             var value = pair.length > 1 ? decodeURIComponent(pair[1]) : "";
-            var index;
+            var index; // veeru indeks, millest väärtusi otsida
 
             if(name == "valdkond"){
                 index = 0;
@@ -273,7 +273,7 @@
             if(name == "kood"){
                 index = 2;
             }
-            if(name == "õppekava"){
+            if(name == "oppekava"){
                 index = 3;
             }
         }
