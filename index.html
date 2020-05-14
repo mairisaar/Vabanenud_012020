@@ -35,6 +35,8 @@
             <!--lühendid-->
             <a href="#pop-up">Lühendid</a>
 
+            <button id="filter" onclick="preFilter()">Filtreeri</button>
+
             <!--andmed seisuga kuupäev-->
             <p id="showDate1"></p>
         </div>
@@ -180,10 +182,9 @@
             }
         }
 
+
         //tabeli kuvamine
-   
         //JSON failist andmete lugemine
-       
         var fail = './andmed.json';
         var vabadeKohtadeAndmed = [];
 
@@ -191,6 +192,7 @@
             var response = await fetch(fail);
             var andmed = await response.json();
             CreateTableFromJSON("showData", andmed); // kutsun välja tabeli loomise funktsiooni
+            preFilter();
         };
            
         getAndmed();
@@ -249,6 +251,53 @@
             divContainer.innerHTML = "";
             divContainer.appendChild(table);
     }
+
+
+    // funktsioon eelfiltreeritud andmetega tabeli kuvamiseks
+    //praegu töötab ainult ühe veeru väärtuse pealt
+    //URL/?veeru_pealkiri=otsitav_väärtus 
+    function preFilter(){
+
+        var query = window.location.search.substring(1); //see on URL pärast ? osa
+        var variables = query.split("&");
+        for (var i = 0; i < variables.length; i++) {
+            var pair = variables[i].split("=");
+            var name = decodeURIComponent(pair[0]);
+            var value = pair.length > 1 ? decodeURIComponent(pair[1]) : "";
+            var index;
+
+            if(name == "valdkond"){
+                index = 0;
+            }
+            if(name == "tase"){
+                index = 1;
+            }
+            if(name == "kood"){
+                index = 2;
+            }
+            if(name == "õppekava"){
+                index = 3;
+            }
+        }
+
+        var table = document.getElementById("showData");
+        var tr = table.getElementsByTagName("tr");
+ 
+        //peita tabel read, kus otsitavat ei leita
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[index];
+            if(td){
+                var txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(value) > -1){
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+
+    }
+
 
     </script>
 
